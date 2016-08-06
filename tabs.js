@@ -1,3 +1,5 @@
+var j$ = jQuery.noConflict();
+
 j$('.slds-tabs--default__link,.slds-tabs--scoped__link').click(function(){
 	j$(this).parent().parent().find('.slds-tabs--default__link,.slds-tabs--scoped__link').attr('aria-selected','false');
 	j$(this).attr('aria-selected','true');
