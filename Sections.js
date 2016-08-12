@@ -1,3 +1,4 @@
+var j$ = jQuery.noConflict();
 /*SLDS Sections*/
 j$('.slds-section__content').hide();
 j$('.slds-section__title').find('button').find('svg').css('transition', '0.3s');
