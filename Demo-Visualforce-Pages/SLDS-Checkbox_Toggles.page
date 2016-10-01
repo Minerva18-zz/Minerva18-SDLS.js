@@ -125,7 +125,7 @@ var j$ = jQuery.noConflict();
 </fieldset>
 <br/>
 
-<h3 class="slds-section-title--divider SectionHead" style="text-align:center;">Get This Demo Page Code <a href="https://github.com/Minerva18/Minerva18-SDLS.js/blob/master/Demo-Visualforce-Pages/SLDS-Toggles.html" target="_blank" style="font-weight:bold;">HERE</a></h3>
+<h3 class="slds-section-title--divider SectionHead" style="text-align:center;">Get This Demo Page Code <a href="https://github.com/Minerva18/Minerva18-SDLS.js/blob/master/Demo-Visualforce-Pages/SLDS-Toggles.page" target="_blank" style="font-weight:bold;">HERE</a></h3>
 
 </div>
 <style>
