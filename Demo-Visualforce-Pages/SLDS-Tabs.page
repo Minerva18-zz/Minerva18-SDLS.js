@@ -82,6 +82,7 @@ var j$ = jQuery.noConflict();
   <div id="tab-default-3" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item" style="height:93px;">Item Three Content</div>
 </div>
 
+<h3 class="slds-section-title--divider SectionHead" style="text-align:center;">Get This Demo Page Code <a href="https://github.com/Minerva18/Minerva18-SDLS.js/blob/master/Demo-Visualforce-Pages/SLDS-Tabs.page" target="_blank" style="font-weight:bold;">HERE</a></h3>
 </div>
 <script>
 
