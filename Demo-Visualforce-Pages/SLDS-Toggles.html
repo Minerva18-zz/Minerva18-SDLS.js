@@ -1,0 +1,147 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showheader="false">
+<!--jQuery CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--Salesforce Lightning Design System Static Resource-->
+<apex:stylesheet value="{!URLFOR($Resource.SLDS212, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+<script>
+var j$ = jQuery.noConflict();
+</script>
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+
+<div class="minerva18">
+
+<div class="slds-page-header" role="banner">
+  <div class="slds-media slds-media--center">
+    <div class="slds-media__figure">
+      <img src="http://www.minerva18.com/Fav.png" style="height: 27px;"/>
+    </div>
+    <div class="slds-media__body">
+      <p class="slds-page-header__title slds-truncate slds-align-middle" title="JavaScript for SLDS Sections">Using SLDS Toggles</p>
+      <p class="slds-text-body--small page-header__info">By <a target="_blank" href="http://www.minerva18.com/blog/about-me/">Raghavendhra Yarlagadda</a> • <a href="http://www.minerva18.com/blog/using-the-lightning-design-checkbox-toggles-in-salesforce/" target="_blank">View Code &amp; Explanation</a></p>
+    </div>
+  </div>
+</div>
+
+<fieldset class="slds-box slds-theme--default slds-container">
+   <legend class="slds-text-heading--medium slds-p-vertical--medium">Listner on toggle</legend>
+   
+    <div class="slds-form-element">
+      <label class="slds-checkbox--toggle slds-grid">
+        <span class="slds-form-element__label slds-m-bottom--none">Toggle Label</span>
+        <input id="toggle1" name="checkbox" type="checkbox" aria-describedby="toggle-desc" />
+        <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-checkbox--on">Enabled</span>
+          <span class="slds-checkbox--off">Disabled</span>
+        </span>
+      </label>
+    </div>
+   <div class="slds-text-body--regular slds-m-top--small">The toggle is &rarr; <span style="font-weight:bold;" id="toggleValue1">Off</span></div>
+    <script>
+    j$('#toggle1').on('change',function() {
+    //The syntax inside the if statement below returns true for toggle checked and false for toggle unchecked
+           if(j$(this).prop('checked')){
+               j$('#toggleValue1').text('On');
+           }else{
+               j$('#toggleValue1').text('Off');
+           }
+    });
+    </script> 
+</fieldset>
+
+<fieldset class="slds-box slds-theme--default slds-container">
+   <legend class="slds-text-heading--medium slds-p-vertical--medium">Get toggle value when desired</legend>
+
+
+    <div class="slds-form-element">
+      <label class="slds-checkbox--toggle slds-grid">
+        <span class="slds-form-element__label slds-m-bottom--none">Toggle Label</span>
+        <input id="toggle2" name="checkbox" type="checkbox" aria-describedby="toggle-desc" />
+        <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-checkbox--on">Enabled</span>
+          <span class="slds-checkbox--off">Disabled</span>
+        </span>
+      </label>
+    </div>
+    <button class="slds-button slds-button--neutral slds-m-top--small" onclick="gtv()">Get Toggle Value</button>
+    <div class="slds-text-body--regular slds-m-top--small">The toggle is &rarr; <span style="font-weight:bold;" id="toggleValue2">Off</span></div>
+
+    <script>    
+        function gtv(){
+        //The syntax inside the if statement below returns true for toggle checked and false for toggle unchecked
+            if(j$('#toggle2').prop('checked')){
+               j$('#toggleValue2').text('On');
+           }else{
+               j$('#toggleValue2').text('Off');
+           }
+        }
+    </script>
+</fieldset>
+
+<fieldset class="slds-box slds-theme--default slds-container">
+   <legend class="slds-text-heading--medium slds-p-vertical--medium">Set toggle value when desired</legend>
+
+    <button class="slds-button slds-button--neutral slds-m-bottom--small" onclick="stv()">Set Toggle Value</button>
+    <div class="slds-form-element">
+      <label class="slds-checkbox--toggle slds-grid">
+        <span class="slds-form-element__label slds-m-bottom--none">Toggle Label</span>
+        <input id="toggle3" name="checkbox" type="checkbox" aria-describedby="toggle-desc" />
+        <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-checkbox--on">Enabled</span>
+          <span class="slds-checkbox--off">Disabled</span>
+        </span>
+      </label>
+    </div>
+
+    <script>    
+        function stv(){
+        //The syntax inside the if statement below returns true for toggle checked and false for toggle unchecked
+            if(j$('#toggle3').prop('checked')){
+               j$('#toggle3').removeProp('checked');
+           }else{
+               j$('#toggle3').prop('checked','checked');
+           }
+        }
+    </script>
+</fieldset>
+
+<fieldset class="slds-box slds-theme--default slds-container">
+   <legend class="slds-text-heading--medium slds-p-vertical--medium">The Toggle is checked by default</legend>
+   
+   <div class="slds-form-element">
+      <label class="slds-checkbox--toggle slds-grid">
+        <span class="slds-form-element__label slds-m-bottom--none">Toggle Label</span>
+        <input id="toggle4" name="checkbox" checked="checked" type="checkbox" aria-describedby="toggle-desc" />
+        <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+          <span class="slds-checkbox--faux"></span>
+          <span class="slds-checkbox--on">Enabled</span>
+          <span class="slds-checkbox--off">Disabled</span>
+        </span>
+      </label>
+    </div>
+   
+</fieldset>
+<br/>
+
+<h3 class="slds-section-title--divider SectionHead" style="text-align:center;">Get This Demo Page Code <a href="https://github.com/Minerva18/Minerva18-SDLS.js/blob/master/Demo-Visualforce-Pages/SLDS-Sections.html" target="_blank" style="font-weight:bold;">HERE</a></h3>
+
+</div>
+<style>
+.SectionHead{
+    background-color: #f0f8fc !important;
+    //font-weight: 600; 
+    color: #00396B !important;
+    border-left: 4px solid #0070D2;
+    padding: 10px !important;
+}
+.slds-checkbox--on{
+    text-align:center;
+}
+.slds-checkbox--off{
+    text-align:center;
+}
+</style>
+</html>
+</apex:page>
